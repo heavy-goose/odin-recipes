@@ -1,0 +1,127 @@
+:root {
+    --font-family: Georgia, 'Times New Roman', Times, serif;
+    --text-color: #333333;
+    --background-color: #FAF4E6;
+    --container-bg-color: #D9C8A7;
+    --primary-accent: #E27D60;
+    --secondary-accent: #85A392;
+    --highlight-color: #F3B431;
+    --muted-color: #9e7f41;
+    --link-hover-text: #FAF4E6;
+    
+    font-family: var(--font-family);
+    font-size: 62.5%; /* Base font size set to 62.5% for easy rem calculations */
+}
+
+/* Body styling */
+body {
+    font-size: 1.6rem; /* Base font size for accesibilty purposes */
+    height: 95vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: var(--background-color);
+    color: var(--text-color);
+}
+
+/* Main container styling */
+.container-main {
+    background-color: var(--container-bg-color);
+    border: 3px solid var(--primary-accent);
+    border-radius: 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    height: 90%;
+    width: 40%;
+    padding: 30px;
+    text-align: center;
+}
+
+/* Heading styling */
+h1 {
+    color: var(--primary-accent);
+    
+    font-size: 6rem;
+}
+
+/* Credits section */
+.credits.index{
+    position: absolute;
+    bottom: 30px;
+    font-size: 1.3rem;
+    color: grey;
+}
+
+.credits a {
+    text-decoration: none;
+    color: rgb(58, 56, 56);
+}
+
+/* List styling */
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+li {
+    margin: 10px 0;
+}
+
+/* Anchor link styling */
+li a {
+    display: block;
+    padding: 12px 16px;
+    color: var(--text-color);
+    text-decoration: none;
+    background-color: var(--background-color);
+    border: 2px solid var(--container-bg-color);
+    border-radius: 8px;
+    font-size: 1.6rem;
+    font-weight: bold;
+    transition: all 0.3s ease-in-out;
+}
+
+/* Hover effect */
+li a:hover {
+    background-color: var(--primary-accent);
+    color: #ffffff;
+    border-color: var(--highlight-color);
+    transform: translateY(-3px);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Visited links */
+li a:visited {
+    color: var(--muted-color);
+}
+
+
+/* Focus (active) state */
+li a:active {
+    background-color: var(--secondary-accent);
+    color: #ffffff;
+    border-color: var(--primary-accent);
+    transform: scale(0.98);
+}
+
+
+/* Hover underline animation */
+li a::after {
+    content: "";
+    display: block;
+    width: 0%;
+    height: 2px;
+    background: var(--highlight-color); 
+    transition: width 0.3s ease-in-out;
+}
+
+li a:hover::after {
+    width: 100%;
+}
+
+/* Force the color in case any styles override it */
+li a:hover, li a:hover:visited {
+    color: #FFFFFF !important;
+}

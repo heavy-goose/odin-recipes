@@ -1,0 +1,106 @@
+/* Use colors and variables from the main stylesheet */
+body {
+    margin: 0;
+    font-family: var(--font-family);
+    font-size: 1.6rem;
+    background-color: var(--background-color);
+    color: var(--text-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: auto;
+    overflow-y: auto;
+}
+
+/* Center the main recipe content and apply padding */
+.container-recipe {
+    margin: 15px 0;
+    background-color: var(--container-bg-color);
+    border: 2px solid var(--primary-accent);
+    border-radius: 12px;
+    padding: 20px;
+    max-width: 700px;
+    width: 90%;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Home link styling */
+.container-recipe a {
+    display: inline-block;
+    margin-bottom: 20px 30px 0px 30px;
+    color: var(--primary-accent);
+    font-weight: bold;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.container-recipe a:hover {
+    color: var(--highlight-color);
+}
+
+/* Heading styles */
+.container-recipe h1 {
+    font-size: 4.2rem;
+    color: var(--primary-accent);
+    margin-bottom: 30px;
+    margin-top: -10px;
+}
+
+.container-recipe h2 {
+    font-size: 2.4rem;
+    color: var(--secondary-accent);
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+
+/* Description text */
+.container-recipe p {
+    margin: 10px 0;
+    line-height: 1.6;
+}
+
+/* Recipe image */
+.container-recipe img {
+    display: inline-block;
+    width: 100%;
+    height: auto;
+    margin: 0 auto;
+    border-radius: 8px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Ingredients list */
+.container-recipe ul {
+    list-style: disc;
+    padding-left: 20px;
+    margin: 15px 0;
+}
+
+.container-recipe li {
+    line-height: 1.6;
+    margin: 8px 0;
+}
+
+/* Ordered steps list */
+.container-recipe ol {
+    list-style: decimal;
+    padding-left: 20px;
+    margin: 15px 0;
+}
+
+/* Credits section */
+.credits {
+    text-align: center;
+    font-size: 1.3rem;
+    
+    color: grey;
+}
+
+.credits a {
+    color: var(--text-color);
+    text-decoration: underline;
+}
+
+.credits a:hover {
+    color: var(--primary-accent);
+}
